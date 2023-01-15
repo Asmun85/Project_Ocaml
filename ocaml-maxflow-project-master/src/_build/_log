@@ -1,0 +1,42 @@
+### Starting build.
+# Target: ftest.ml.depends, tags: { extension:ml, file:ftest.ml, ocaml, ocamldep, quiet }
+/usr/bin/ocamldep.opt -modules ftest.ml > ftest.ml.depends # cached
+# Target: fordfulk.mli.depends, tags: { extension:mli, file:fordfulk.mli, ocaml, ocamldep, quiet }
+/usr/bin/ocamldep.opt -modules fordfulk.mli > fordfulk.mli.depends # cached
+# Target: graph.mli.depends, tags: { extension:mli, file:graph.mli, ocaml, ocamldep, quiet }
+/usr/bin/ocamldep.opt -modules graph.mli > graph.mli.depends # cached
+# Target: graph.cmi, tags: { byte, compile, extension:mli, file:graph.mli, interf, ocaml, quiet }
+/usr/bin/ocamlc.opt -c -o graph.cmi graph.mli # cached
+# Target: tools.mli.depends, tags: { extension:mli, file:tools.mli, ocaml, ocamldep, quiet }
+/usr/bin/ocamldep.opt -modules tools.mli > tools.mli.depends # cached
+# Target: tools.cmi, tags: { byte, compile, extension:mli, file:tools.mli, interf, ocaml, quiet }
+/usr/bin/ocamlc.opt -c -o tools.cmi tools.mli # cached
+# Target: fordfulk.cmi, tags: { byte, compile, extension:mli, file:fordfulk.mli, interf, ocaml, quiet }
+/usr/bin/ocamlc.opt -c -o fordfulk.cmi fordfulk.mli # cached
+# Target: gfile.mli.depends, tags: { extension:mli, file:gfile.mli, ocaml, ocamldep, quiet }
+/usr/bin/ocamldep.opt -modules gfile.mli > gfile.mli.depends # cached
+# Target: gfile.cmi, tags: { byte, compile, extension:mli, file:gfile.mli, interf, ocaml, quiet }
+/usr/bin/ocamlc.opt -c -o gfile.cmi gfile.mli # cached
+# Target: ftest.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:ftest.cmo, file:ftest.ml, implem, ocaml, quiet }
+/usr/bin/ocamlc.opt -c -o ftest.cmo ftest.ml # cached
+# Target: fordfulk.ml.depends, tags: { extension:ml, file:fordfulk.ml, ocaml, ocamldep, quiet }
+/usr/bin/ocamldep.opt -modules fordfulk.ml > fordfulk.ml.depends
+# Target: graph.ml.depends, tags: { extension:ml, file:graph.ml, ocaml, ocamldep, quiet }
+/usr/bin/ocamldep.opt -modules graph.ml > graph.ml.depends # cached
+# Target: graph.cmx, tags: { compile, extension:cmx, extension:ml, file:graph.cmx, file:graph.ml, implem, native, ocaml, quiet }
+/usr/bin/ocamlopt.opt -c -o graph.cmx graph.ml # cached
+# Target: tools.ml.depends, tags: { extension:ml, file:tools.ml, ocaml, ocamldep, quiet }
+/usr/bin/ocamldep.opt -modules tools.ml > tools.ml.depends # cached
+# Target: tools.cmx, tags: { compile, extension:cmx, extension:ml, file:tools.cmx, file:tools.ml, implem, native, ocaml, quiet }
+/usr/bin/ocamlopt.opt -c -o tools.cmx tools.ml # cached
+# Target: gfile.ml.depends, tags: { extension:ml, file:gfile.ml, ocaml, ocamldep, quiet }
+/usr/bin/ocamldep.opt -modules gfile.ml > gfile.ml.depends # cached
+# Target: gfile.cmx, tags: { compile, extension:cmx, extension:ml, file:gfile.cmx, file:gfile.ml, implem, native, ocaml, quiet }
+/usr/bin/ocamlopt.opt -c -o gfile.cmx gfile.ml # cached
+# Target: fordfulk.cmx, tags: { compile, extension:cmx, extension:ml, file:fordfulk.cmx, file:fordfulk.ml, implem, native, ocaml, quiet }
+/usr/bin/ocamlopt.opt -c -o fordfulk.cmx fordfulk.ml
+# Target: ftest.cmx, tags: { compile, extension:cmx, extension:ml, file:ftest.cmx, file:ftest.ml, implem, native, ocaml, quiet }
+/usr/bin/ocamlopt.opt -c -o ftest.cmx ftest.ml
+# Target: ftest.native, tags: { dont_link_with, extension:native, file:ftest.native, link, native, ocaml, program, quiet }
+/usr/bin/ocamlopt.opt graph.cmx tools.cmx fordfulk.cmx gfile.cmx ftest.cmx -o ftest.native
+# Compilation successful.
